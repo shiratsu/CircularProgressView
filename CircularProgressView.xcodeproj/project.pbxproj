@@ -10,6 +10,7 @@
 		F3B0411F2700BA6100B7E742 /* CircularProgressView.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F3B041152700BA6000B7E742 /* CircularProgressView.framework */; };
 		F3B041242700BA6100B7E742 /* CircularProgressViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B041232700BA6100B7E742 /* CircularProgressViewTests.swift */; };
 		F3B041262700BA6100B7E742 /* CircularProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = F3B041182700BA6000B7E742 /* CircularProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		F3B041542700BB4400B7E742 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B041532700BB4400B7E742 /* CircularProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,7 @@
 		F3B0411E2700BA6100B7E742 /* CircularProgressViewTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CircularProgressViewTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3B041232700BA6100B7E742 /* CircularProgressViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressViewTests.swift; sourceTree = "<group>"; };
 		F3B041252700BA6100B7E742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F3B041532700BB4400B7E742 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 			children = (
 				F3B041182700BA6000B7E742 /* CircularProgressView.h */,
 				F3B041192700BA6000B7E742 /* Info.plist */,
+				F3B041532700BB4400B7E742 /* CircularProgressBarView.swift */,
 			);
 			path = CircularProgressView;
 			sourceTree = "<group>";
@@ -147,6 +150,7 @@
 				TargetAttributes = {
 					F3B041142700BA6000B7E742 = {
 						CreatedOnToolsVersion = 12.5;
+						LastSwiftMigration = 1250;
 					};
 					F3B0411D2700BA6100B7E742 = {
 						CreatedOnToolsVersion = 12.5;
@@ -194,6 +198,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3B041542700BB4400B7E742 /* CircularProgressBarView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +346,7 @@
 		F3B0412A2700BA6100B7E742 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9B572M55JZ;
@@ -349,6 +355,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CircularProgressView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -357,6 +364,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hiratsuka.CircularProgressView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -365,6 +374,7 @@
 		F3B0412B2700BA6100B7E742 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 9B572M55JZ;
@@ -373,6 +383,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = CircularProgressView/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -381,6 +392,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = jp.hiratsuka.CircularProgressView;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -389,6 +401,7 @@
 		F3B0412D2700BA6100B7E742 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9B572M55JZ;
 				INFOPLIST_FILE = CircularProgressViewTests/Info.plist;
@@ -407,6 +420,7 @@
 		F3B0412E2700BA6100B7E742 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 9B572M55JZ;
 				INFOPLIST_FILE = CircularProgressViewTests/Info.plist;
