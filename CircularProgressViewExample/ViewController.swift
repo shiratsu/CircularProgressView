@@ -6,7 +6,7 @@
 //
 
 import UIKit
-//import CircularProgressView
+import CircularProgressView
 
 class ViewController: UIViewController {
     
@@ -17,14 +17,16 @@ class ViewController: UIViewController {
     // MARK: - Properties -
 
     @IBOutlet weak var containerView: UIView!
-    var circularView: CircularProgressBarView!
+    var circularView: CircularProgressView!
     var duration: TimeInterval!
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        circularView = CircularProgressBarView(frame: CGRect(x: 10, y: 10, width: 70, height: 70))
+        circularView = CircularProgressView()
+        circularView.frame = CGRect(x: 10, y: 10, width: 70, height: 70)
+        circularView.createCircularPath()
         circularView.center = view.center
         containerView.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         view.addSubview(circularView)

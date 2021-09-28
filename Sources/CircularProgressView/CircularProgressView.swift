@@ -11,10 +11,10 @@ public class CircularProgressView: UIView {
 
     // MARK: - Properties -
 
-    private var circleLayer = CAShapeLayer()
-    private var progressLayer = CAShapeLayer()
+    public var circleLayer = CAShapeLayer()
+    public var progressLayer = CAShapeLayer()
     
-    override init(frame: CGRect) {
+    override public init(frame: CGRect) {
         super.init(frame: frame)
         createCircularPath()
     }
