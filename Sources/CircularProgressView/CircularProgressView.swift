@@ -16,7 +16,7 @@ public class CircularProgressView: UIView {
     private var startPoint = CGFloat(-Double.pi / 2)
     private var endPoint = CGFloat(3 * Double.pi / 2)
 
-    override init(frame: CGRect) {
+    public override init(frame: CGRect) {
        super.init(frame: frame)
     }
 
