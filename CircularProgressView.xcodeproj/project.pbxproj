@@ -20,6 +20,7 @@
 		F3B0417E2700BFD400B7E742 /* CircularProgressViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B0417D2700BFD400B7E742 /* CircularProgressViewExampleUITests.swift */; };
 		F3B0418E2700C3E200B7E742 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B0418D2700C3E200B7E742 /* CircularProgressView.swift */; };
 		F3B041912700CF0700B7E742 /* CircularProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = F3B041902700CF0700B7E742 /* CircularProgressView */; };
+		F3B041932703C71400B7E742 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B041922703C71400B7E742 /* CircularProgressBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		F3B0417F2700BFD400B7E742 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F3B0418B2700C34C00B7E742 /* Package.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
 		F3B0418D2700C3E200B7E742 /* CircularProgressView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CircularProgressView.swift; sourceTree = "<group>"; };
+		F3B041922703C71400B7E742 /* CircularProgressBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularProgressBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -166,6 +168,7 @@
 				F3B041642700BFD300B7E742 /* Assets.xcassets */,
 				F3B041662700BFD300B7E742 /* LaunchScreen.storyboard */,
 				F3B041692700BFD300B7E742 /* Info.plist */,
+				F3B041922703C71400B7E742 /* CircularProgressBarView.swift */,
 			);
 			path = CircularProgressViewExample;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 			files = (
 				F3B041602700BFD000B7E742 /* ViewController.swift in Sources */,
 				F3B0415C2700BFD000B7E742 /* AppDelegate.swift in Sources */,
+				F3B041932703C71400B7E742 /* CircularProgressBarView.swift in Sources */,
 				F3B0415E2700BFD000B7E742 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

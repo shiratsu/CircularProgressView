@@ -1,16 +1,17 @@
 //
-//  CircularProgressView.swift
-//  CircularProgressView
+//  CircularProgressBarView.swift
+//  CircularProgressViewExample
 //
-//  Created by 平塚俊輔 on 2021/09/26.
+//  Created by 平塚俊輔 on 2021/09/29.
 //
 
 import UIKit
 
-public class CircularProgressView: UIView {
+class CircularProgressBarView: UIView {
 
     // MARK: - Properties -
 
+    // First create two layer properties
     private var circleLayer = CAShapeLayer()
     private var progressLayer = CAShapeLayer()
     
@@ -22,7 +23,7 @@ public class CircularProgressView: UIView {
         super.init(coder: aDecoder)
         createCircularPath()
     }
-    public func createCircularPath() {
+    func createCircularPath() {
         let circularPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: 80, startAngle: -.pi / 2, endAngle: 3 * .pi / 2, clockwise: true)
         circleLayer.path = circularPath.cgPath
         circleLayer.fillColor = UIColor.clear.cgColor
@@ -38,7 +39,7 @@ public class CircularProgressView: UIView {
         layer.addSublayer(circleLayer)
         layer.addSublayer(progressLayer)
     }
-    public func progressAnimation(duration: TimeInterval) {
+    func progressAnimation(duration: TimeInterval) {
         let circularProgressAnimation = CABasicAnimation(keyPath: "strokeEnd")
         circularProgressAnimation.duration = duration
         circularProgressAnimation.toValue = 1.0
