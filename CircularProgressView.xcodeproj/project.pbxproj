@@ -19,7 +19,6 @@
 		F3B041732700BFD400B7E742 /* CircularProgressViewExampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B041722700BFD400B7E742 /* CircularProgressViewExampleTests.swift */; };
 		F3B0417E2700BFD400B7E742 /* CircularProgressViewExampleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B0417D2700BFD400B7E742 /* CircularProgressViewExampleUITests.swift */; };
 		F3B0418E2700C3E200B7E742 /* CircularProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B0418D2700C3E200B7E742 /* CircularProgressView.swift */; };
-		F3B041912700CF0700B7E742 /* CircularProgressView in Frameworks */ = {isa = PBXBuildFile; productRef = F3B041902700CF0700B7E742 /* CircularProgressView */; };
 		F3B041932703C71400B7E742 /* CircularProgressBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B041922703C71400B7E742 /* CircularProgressBarView.swift */; };
 		F3B0419627051B8E00B7E742 /* CircleBase.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3B041942705197E00B7E742 /* CircleBase.swift */; };
 /* End PBXBuildFile section */
@@ -80,7 +79,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F3B041912700CF0700B7E742 /* CircularProgressView in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -239,7 +237,6 @@
 			);
 			name = CircularProgressView;
 			packageProductDependencies = (
-				F3B041902700CF0700B7E742 /* CircularProgressView */,
 			);
 			productName = CircularProgressView;
 			productReference = F3B041152700BA6000B7E742 /* CircularProgressView.framework */;
@@ -902,14 +899,6 @@
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		F3B041902700CF0700B7E742 /* CircularProgressView */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = F3B0418F2700CF0700B7E742 /* XCRemoteSwiftPackageReference "CircularProgressView" */;
-			productName = CircularProgressView;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = F3B0410C2700BA6000B7E742 /* Project object */;
 }
