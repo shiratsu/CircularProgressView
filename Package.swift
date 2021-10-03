@@ -24,5 +24,9 @@ let package = Package(
         .testTarget(
             name: "CircularProgressViewTests",
             dependencies: ["CircularProgressView"]),
+        // ↓これを追加
+        swiftSettings: [
+            .unsafeFlags(["-emit-objc-header", "-emit-objc-header-path", "OurLibrary-Swift.h"])
+        ]),
     ]
 )
