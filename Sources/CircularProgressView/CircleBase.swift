@@ -7,10 +7,13 @@
 
 import UIKit
 
+@objc
 public class CircleBase: UIView {
     
     var circleView: CircularProgressView?
+    var timerLabel: UILabel?
     var duration: TimeInterval = 5
+    var timer: Timer?
 
     override public init(frame: CGRect) {
         super.init(frame: frame)
