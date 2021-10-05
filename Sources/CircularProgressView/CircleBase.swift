@@ -29,6 +29,12 @@ public class CircleBase: UIView {
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         
         addSubview(circleView!)
+        
+        timerLabel = UILabel(frame: CGRect(x: self.frame.width/2-30, y: self.frame.height/2-20, width: 50, height: 30))
+        
+        timerLabel?.text = "00:00"
+        
+        addSubview(timerLabel!)
     }
     
     @objc public func handleTap() {

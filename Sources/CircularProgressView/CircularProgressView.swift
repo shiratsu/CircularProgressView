@@ -11,6 +11,7 @@ import UIKit
 public class CircularProgressView: UIView {
 
     // MARK: - Properties -
+    
 
     public var circleLayer = CAShapeLayer()
     public var progressLayer = CAShapeLayer()
