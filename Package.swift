@@ -20,13 +20,14 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "CircularProgressView",
-            dependencies: []),
+            dependencies: [],
+            swiftSettings: [
+                .unsafeFlags(["-emit-objc-header", "-emit-objc-header-path", "OurLibrary-Swift.h"])
+            ]
+        ),
         .testTarget(
             name: "CircularProgressViewTests",
             dependencies: ["CircularProgressView"]),
-        // ↓これを追加
-        swiftSettings: [
-            .unsafeFlags(["-emit-objc-header", "-emit-objc-header-path", "OurLibrary-Swift.h"])
-        ]),
+        
     ]
 )
