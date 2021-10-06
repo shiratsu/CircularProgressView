@@ -12,7 +12,7 @@ public class CircleBase: UIView {
     
     var circleView: CircularProgressView?
     var timerLabel: UILabel?
-    var duration: TimeInterval = 120
+    var duration: TimeInterval = 480
     public var timer: Timer?
 
     override public init(frame: CGRect) {
