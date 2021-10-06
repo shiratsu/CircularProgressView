@@ -12,7 +12,7 @@ public class CircleBase: UIView {
     
     var circleView: CircularProgressView?
     var timerLabel: UILabel?
-    var duration: TimeInterval = 5
+    var duration: TimeInterval = 120
     public var timer: Timer?
 
     override public init(frame: CGRect) {
@@ -71,7 +71,7 @@ public class CircleBase: UIView {
     }
     
     @objc public func handleTap() {
-        duration = 5    //Play with whatever value you want :]
+        
         circleView?.progressAnimation(duration: duration)
         startTimer()
     }
