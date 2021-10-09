@@ -12,7 +12,7 @@ public class CircleBase: UIView {
     
     var circleView: CircularProgressView?
     var timerLabel: UILabel?
-    var duration: TimeInterval = 480
+    public var duration: TimeInterval = 480
     public var timer: Timer?
 
     override public init(frame: CGRect) {
@@ -45,7 +45,7 @@ public class CircleBase: UIView {
         }
         
         timer = Timer.scheduledTimer(
-            timeInterval: 0.01,
+            timeInterval: 1,
             target: self,
             selector: #selector(self.timerCounter),
             userInfo: nil,
@@ -63,11 +63,19 @@ public class CircleBase: UIView {
     }
  
     @objc func timerCounter() {
-        let now = Date()
+//        let now = Date()
+        
+        duration -= 1
+        
+        let minute = duration / 60
+        let second = Int(duration)  % 60
+        
+        let strRest = "\(minute):\(second)"
+        
  
-        let fomatter = DateFormatter()
-        fomatter.dateFormat = "mm:ss"
-        timerLabel?.text = fomatter.string(from: now)
+//        let fomatter = DateFormatter()
+//        fomatter.dateFormat = strRest
+        timerLabel?.text = strRest
     }
     
     @objc public func handleTap() {
