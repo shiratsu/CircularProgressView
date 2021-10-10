@@ -67,8 +67,14 @@ public class CircleBase: UIView {
         
         duration -= 1
         
-        let minute = duration / 60
+        print(duration)
+        
+        
+        let minute = Int(duration / 60)
         let second = Int(duration)  % 60
+        
+        print(minute)
+        print(second)
         
         let strRest = "\(minute):\(second)"
         
