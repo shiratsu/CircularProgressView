@@ -73,10 +73,12 @@ public class CircleBase: UIView {
         let minute = Int(duration / 60)
         let second = Int(duration)  % 60
         
-        print(minute)
-        print(second)
+//        print(minute)
+//        print(second)
         
-        let strRest = "\(minute):\(second)"
+        let strSecond: String = (second >= 10) ? String(second) : "0"+String(second)
+        
+        let strRest = String(minute)+":"+strSecond
         
  
 //        let fomatter = DateFormatter()
