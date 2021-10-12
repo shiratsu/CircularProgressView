@@ -7,9 +7,15 @@ let package = Package(
     name: "CircularProgressView",
     products: [
         // Products define the executables and libraries a package produces, and make them visible to other packages.
+//        .library(
+//            name: "CircularProgressView",
+//            targets: ["CircularProgressView"]
+//        ),
         .library(
-            name: "CircularProgressView",
-            targets: ["CircularProgressView"]),
+           name: "CircularProgressView",
+           targets: ["CircularProgressView"]
+        ), // ← Cターゲットを公開
+        
     ],
     dependencies: [
         // Dependencies declare other packages that this package depends on.
@@ -21,10 +27,14 @@ let package = Package(
         .target(
             name: "CircularProgressView",
             dependencies: [],
-            swiftSettings: [
-                .unsafeFlags(["-emit-objc-header", "-emit-objc-header-path", "OurLibrary-Swift.h"])
-            ]
+//            swiftSettings: [
+//                .unsafeFlags(["-emit-objc-header", "-emit-objc-header-path", "CircularProgressView-Swift.h"])
+//            ]
         ),
+        // ↓これを追加
+       .target(
+           name: "C_CircularProgressView",
+           dependencies: ["CircularProgressView"]),
         .testTarget(
             name: "CircularProgressViewTests",
             dependencies: ["CircularProgressView"]),
