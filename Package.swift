@@ -14,7 +14,7 @@ let package = Package(
         .library(
            name: "CircularProgressView",
            targets: ["CircularProgressView"]
-        ), // ← Cターゲットを公開
+        ) // ← Cターゲットを公開
         
     ],
     dependencies: [
@@ -26,7 +26,7 @@ let package = Package(
         // Targets can depend on other targets in this package, and on products in packages this package depends on.
         .target(
             name: "CircularProgressView",
-            dependencies: [],
+            dependencies: []
 //            swiftSettings: [
 //                .unsafeFlags(["-emit-objc-header", "-emit-objc-header-path", "CircularProgressView-Swift.h"])
 //            ]
@@ -37,7 +37,7 @@ let package = Package(
            dependencies: ["CircularProgressView"]),
         .testTarget(
             name: "CircularProgressViewTests",
-            dependencies: ["CircularProgressView"]),
+            dependencies: ["CircularProgressView"])
         
     ]
 )
