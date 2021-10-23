@@ -27,6 +27,7 @@ public class CircleBase: UIView {
     
     public func setCircleView(){
         circleView = CircularProgressView(frame: CGRect(x: self.frame.width/2-35, y: self.frame.height/2-35, width: 70, height: 70))
+        circleView?.createCircularPath()
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         
         addSubview(circleView!)

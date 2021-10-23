@@ -21,11 +21,11 @@ public class CircularProgressView: UIView {
     
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        createCircularPath()
+//        createCircularPath()
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        createCircularPath()
+//        createCircularPath()
     }
     public func createCircularPath() {
         let circularPath = UIBezierPath(arcCenter: CGPoint(x: frame.size.width / 2.0, y: frame.size.height / 2.0), radius: 80, startAngle: -.pi / 2, endAngle: 3 * .pi / 2, clockwise: true)
