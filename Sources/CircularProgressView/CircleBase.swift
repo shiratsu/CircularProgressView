@@ -79,6 +79,10 @@ public class CircleBase: UIView {
         
         // iぷんだったら
         // 音を鳴らす
+        if second == 0{
+            playSound()
+        }
+        
         
         let strSecond: String = (second >= 10) ? String(second) : "0"+String(second)
         
