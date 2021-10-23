@@ -18,15 +18,17 @@ public class CircleBase: UIView {
 
     override public init(frame: CGRect) {
         super.init(frame: frame)
-        setCircleView()
+        setCircleView(UIColor.black, progressColor: UIColor.red)
     }
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
-        setCircleView()
+        setCircleView(UIColor.black, progressColor: UIColor.red)
     }
     
-    public func setCircleView(){
+    public func setCircleView(_ circleColor: UIColor, progressColor: UIColor){
         circleView = CircularProgressView(frame: CGRect(x: self.frame.width/2-35, y: self.frame.height/2-35, width: 70, height: 70))
+        circleView?.circleStrokeColor = circleColor
+        circleView?.progressStrokeColor = progressColor
         circleView?.createCircularPath()
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         
