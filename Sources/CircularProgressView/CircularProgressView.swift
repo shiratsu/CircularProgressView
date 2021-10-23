@@ -13,6 +13,9 @@ public class CircularProgressView: UIView {
     // MARK: - Properties -
     
 
+    public var circleStrokeColor: UIColor?
+    public var progressStrokeColor: UIColor?
+    
     public var circleLayer = CAShapeLayer()
     public var progressLayer = CAShapeLayer()
     
@@ -30,13 +33,13 @@ public class CircularProgressView: UIView {
         circleLayer.fillColor = UIColor.clear.cgColor
         circleLayer.lineCap = .round
         circleLayer.lineWidth = 20.0
-        circleLayer.strokeColor = UIColor.black.cgColor
+        circleLayer.strokeColor = circleStrokeColor?.cgColor
         progressLayer.path = circularPath.cgPath
         progressLayer.fillColor = UIColor.clear.cgColor
         progressLayer.lineCap = .round
         progressLayer.lineWidth = 10.0
         progressLayer.strokeEnd = 0
-        progressLayer.strokeColor = UIColor.red.cgColor
+        progressLayer.strokeColor = progressStrokeColor?.cgColor
         layer.addSublayer(circleLayer)
         layer.addSublayer(progressLayer)
     }

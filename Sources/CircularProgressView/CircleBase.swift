@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import AVKit
 
 @objc
 public class CircleBase: UIView {
@@ -76,6 +77,9 @@ public class CircleBase: UIView {
 //        print(minute)
 //        print(second)
         
+        // iぷんだったら
+        // 音を鳴らす
+        
         let strSecond: String = (second >= 10) ? String(second) : "0"+String(second)
         
         let strRest = String(minute)+":"+strSecond
@@ -90,5 +94,10 @@ public class CircleBase: UIView {
         
         circleView?.progressAnimation(duration: duration)
         startTimer()
+    }
+    
+    //１分ごとに音を鳴らす
+    private func playSound(){
+        AudioServicesPlaySystemSound(1007);
     }
 }
