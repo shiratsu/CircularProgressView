@@ -12,8 +12,7 @@ import AVKit
 public class CircleBase: UIView {
     
     
-    public var circleStrokeColor: UIColor = UIColor.white
-    public var progressStrokeColor: UIColor = UIColor.red
+    
     var circleView: CircularProgressView?
     var timerLabel: UILabel?
     public var duration: TimeInterval = 480
@@ -30,9 +29,7 @@ public class CircleBase: UIView {
     
     public func setCircleView(){
         circleView = CircularProgressView(frame: CGRect(x: self.frame.width/2-35, y: self.frame.height/2-35, width: 70, height: 70))
-        circleView?.circleStrokeColor = circleStrokeColor
-        circleView?.progressStrokeColor = progressStrokeColor
-        circleView?.createCircularPath()
+//        circleView?.createCircularPath()
         addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(handleTap)))
         
         addSubview(circleView!)
